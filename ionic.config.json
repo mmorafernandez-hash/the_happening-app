@@ -1,0 +1,7 @@
+{
+  "name": "the_happening-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
