@@ -1,0 +1,240 @@
+/* Fondo blanco general y márgenes interiores de la pantalla */
+.fondo {
+  --background: #ffffff;
+  --padding-start: 16px;
+  --padding-end: 16px;
+  --padding-top: 20px;
+}
+
+/* 1. CABECERA SUPERIOR */
+.cabecera {
+  display: flex;                  /* Pone el perfil a la izquierda y la campana a la derecha */
+  justify-content: space-between; /* Separa ambos bloques a los extremos */
+  align-items: center;            /* Los alinea verticalmente al centro */
+  margin-bottom: 16px;
+
+  .perfil {
+    display: flex;
+    align-items: center;
+    gap: 12px;                    /* Espacio entre el logo morado y los textos */
+  }
+
+  /* Cuadrado morado del logo */
+  .logo {
+    width: 48px;
+    height: 48px;
+    background: #654ce6;
+    border-radius: 14px;          /* Bordes redondeados */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 28px;
+      height: 28px;
+      object-fit: contain;        /* Ajusta el icono sin deformarlo */
+    }
+  }
+
+  /* Textos de saludo apilados uno debajo de otro */
+  .saludo {
+    display: flex;
+    flex-direction: column;
+
+    .hola {
+      font-size: 11px;
+      color: #999999;
+      font-weight: 600;
+    }
+
+    .nombre {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 700;
+      color: #222222;
+    }
+
+    .rol {
+      font-size: 12px;
+      color: #666666;
+    }
+  }
+
+  /* Color morado de la campana */
+  .campana {
+    --color: #654ce6;
+    font-size: 24px;
+  }
+}
+
+/* 2. BUSCADOR Y FILTRO */
+.buscador {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+
+  /* Caja de búsqueda redondeada de color lila suave */
+  .barra {
+    --background: #eae7fa;
+    --border-radius: 20px;
+    --box-shadow: none;
+    --icon-color: #654ce6;
+    padding: 0;
+  }
+
+  /* Botón cuadrado morado de filtros */
+  .filtro {
+    --background: #654ce6;
+    --border-radius: 12px;
+    height: 42px;
+    width: 44px;
+    margin: 0;
+  }
+}
+
+/* 3. CATEGORÍAS (PÍLDORAS) */
+.categorias {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+
+  ion-chip {
+    --background: #eae7fa;        /* Fondo lila claro por defecto */
+    --color: #666666;
+    font-size: 11px;
+    font-weight: 600;
+    margin: 0;
+
+    /* Estilo especial para la categoría seleccionada */
+    &.activo {
+      --background: #654ce6;      /* Fondo morado intenso */
+      --color: #ffffff;           /* Texto blanco */
+    }
+  }
+}
+
+/* 4. TÍTULO DE SECCIÓN */
+.seccion {
+  color: #654ce6;
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0 0 12px 0;
+}
+
+/* 5. TARJETAS DE EVENTOS */
+.tarjeta {
+  margin: 0 0 16px 0;
+  border-radius: 16px;
+  background: #f5f4f9;            /* Gris muy claro para el cuerpo de la tarjeta */
+  box-shadow: none;               /* Quita la sombra por defecto de ion-card */
+  overflow: hidden;               /* Recorta la imagen para que respete los bordes redondeados */
+
+  /* Contenedor de la foto */
+  .portada {
+    position: relative;           /* Necesario para posicionar la etiqueta y la sombra encima */
+    height: 130px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;          /* Rellena toda la portada sin deformar la foto */
+    }
+
+    /* Etiqueta roja "¡Últimas Plazas!" */
+    .etiqueta {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: #e53935;
+      color: #ffffff;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 8px;
+    }
+
+    /* Degradado negro inferior sobre la foto para leer el título */
+    .sombra {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 20px 12px 8px 12px;
+      background: linear-gradient(transparent, rgba(0, 0, 0, 0.75));
+
+      h4 {
+        margin: 0;
+        color: #ffffff;
+        font-size: 16px;
+        font-weight: 700;
+      }
+    }
+  }
+
+  /* Parte inferior de la tarjeta (fecha e inscritos) */
+  .detalles {
+    padding: 10px 14px;
+
+    .fecha {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: #444444;
+      font-size: 12px;
+      margin-bottom: 8px;
+    }
+
+    .pie {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      /* Círculos superpuestos simulando fotos de perfil */
+      .avatares {
+        display: flex;
+        align-items: center;
+
+        .circulo {
+          width: 18px;
+          height: 18px;
+          border-radius: 50%;
+          border: 2px solid #ffffff;
+          margin-right: -6px;     /* Hace que un círculo monte encima del anterior */
+
+          &.amarillo { background: #ffca28; }
+          &.azul { background: #42a5f5; }
+          &.morado { background: #654ce6; margin-right: 8px; }
+        }
+
+        .inscritos {
+          font-size: 11px;
+          color: #666666;
+        }
+      }
+
+      /* Enlace morado "Ver más" */
+      .enlace {
+        color: #654ce6;
+        font-size: 12px;
+        font-weight: 600;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+/* 6. BARRA DE NAVEGACIÓN INFERIOR */
+.menu {
+  --background: #ffffff;
+  border-top: 1px solid #eeeeee;
+
+  ion-tab-button {
+    --color: #666666;
+
+    /* Icono activo en morado */
+    &.activa {
+      --color: #654ce6;
+    }
+  }
+}
