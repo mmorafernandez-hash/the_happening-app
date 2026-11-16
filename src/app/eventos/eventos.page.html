@@ -1,7 +1,5 @@
-<!-- Contenedor principal de la pantalla con fondo claro -->
 <ion-content [fullscreen]="true" class="fondo">
 
-  <!-- Cabecera con todos los iconos metidos -->
   <div class="cabecera">
     <div class="perfil">
       <div class="logo">
@@ -15,55 +13,45 @@
     </div>
 
     <!-- es la parte del boton derecho de la campana -->
-    <ion-button fill="clear" class="campana">
+    <ion-button routerLink="/notificaciones" fill="clear" class="campana">
       <ion-icon name="notifications-outline" slot="icon-only"></ion-icon>
     </ion-button>
   </div>
 
-  <!-- 2. BUSCADOR Y BOTÓN DE FILTROS -->
+  <!-- buscador y boton de filtros-->
   <div class="buscador">
-    <!-- Barra de búsqueda nativa de Ionic -->
     <ion-searchbar placeholder="Buscar eventos" class="barra"></ion-searchbar>
-    <!-- Botón morado cuadrado con icono de ajustes/filtros -->
     <ion-button class="filtro">
       <ion-icon name="options-outline" slot="icon-only"></ion-icon>
     </ion-button>
   </div>
 
-  <!-- 3. PÍLDORAS DE CATEGORÍAS (Botones ovalados para filtrar) -->
-  <div class="categorias">
-    <!-- La clase "activo" pinta esta píldora de morado -->
-    <ion-chip class="activo">TODOS</ion-chip>
-    <ion-chip>DEPORTES</ion-chip>
-    <ion-chip>OTROS EVENTOS</ion-chip>
-  </div>
+  <!-- pildoras de categoria -->
+    <div class="categorias">
+      <ion-chip class="activo">TODOS</ion-chip>
+      <ion-chip routerLink="/deportes">DEPORTES</ion-chip>
+      <ion-chip routerLink="/otros-eventos">OTROS EVENTOS</ion-chip>
+    </div>
 
-  <!-- 4. TÍTULO DE LA SECCIÓN -->
+
   <h3 class="seccion">PRÓXIMOS EVENTOS</h3>
 
-  <!-- 5. LISTA DE TARJETAS DE EVENTOS -->
-
-  <!-- TARJETA 1: FERIA DE CIENCIA -->
+  <!-- ciencia -->
   <ion-card class="tarjeta">
-    <!-- Parte superior de la tarjeta con la foto y el título encima -->
     <div class="portada">
       <img src="assets/icon/teatro.jpg" alt="Feria de Ciencia" />
-      <!-- Etiqueta roja flotante arriba a la derecha -->
       <span class="etiqueta">¡Últimas Plazas!</span>
-      <!-- Degradado oscuro abajo para que el texto blanco se lea bien -->
       <div class="sombra">
         <h4>FERIA DE CIENCIA</h4>
       </div>
     </div>
 
-    <!-- Parte inferior blanca/gris con fecha, asistentes y enlace -->
     <div class="detalles">
-      <!-- Fila de fecha y lugar con icono de calendario -->
       <div class="fecha">
         <ion-icon name="calendar-outline"></ion-icon>
         <span>24 sep - 10:00 - Patio Central</span>
       </div>
-      <!-- Fila inferior con círculos de colores (avatares) y botón "Ver más" -->
+
       <div class="pie">
         <div class="avatares">
           <span class="circulo amarillo"></span>
@@ -76,7 +64,7 @@
     </div>
   </ion-card>
 
-  <!-- TARJETA 2: FESTIVAL CULTURAL -->
+  <!-- cultural -->
   <ion-card class="tarjeta">
     <div class="portada">
       <img src="assets/icon/musica.jpg" alt="Festival Cultural" />
@@ -102,7 +90,7 @@
     </div>
   </ion-card>
 
-  <!-- TARJETA 3: TORNEO DE FUTBOL -->
+  <!-- futbol -->
   <ion-card class="tarjeta">
     <div class="portada">
       <img src="assets/icon/mundial.jpg" alt="Torneo de Futbol" />
@@ -114,7 +102,7 @@
     <div class="detalles">
       <div class="fecha">
         <ion-icon name="calendar-outline"></ion-icon>
-        <span>2 oct - 12:00 - Salón de Actos</span>
+        <span>16 oct - 12:00 - Pista Central</span>
       </div>
       <div class="pie">
         <div class="avatares">
@@ -130,23 +118,21 @@
 
 </ion-content>
 
-<!-- 6. BARRA DE NAVEGACIÓN INFERIOR FIJA -->
 <ion-footer>
   <ion-tab-bar slot="bottom" class="menu">
-    <!-- Botón de Inicio marcado en morado con la clase "activa" -->
-    <ion-tab-button class="activa">
+    <ion-tab-button routerLink="/eventos" class="activa">
       <ion-icon name="home-outline"></ion-icon>
     </ion-tab-button>
-    <ion-tab-button>
+    <ion-tab-button routerLink="/tickets">
       <ion-icon name="ticket-outline"></ion-icon>
     </ion-tab-button>
-    <ion-tab-button>
+    <ion-tab-button routerLink="/calendario">
       <ion-icon name="calendar-outline"></ion-icon>
     </ion-tab-button>
-    <ion-tab-button>
+    <ion-tab-button routerLink="/notificaciones">
       <ion-icon name="notifications-outline"></ion-icon>
     </ion-tab-button>
-    <ion-tab-button>
+    <ion-tab-button routerLink="/perfil">
       <ion-icon name="person-outline"></ion-icon>
     </ion-tab-button>
   </ion-tab-bar>

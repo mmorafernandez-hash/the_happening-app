@@ -35,3 +35,21 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import '@ionic/angular/css/palettes/dark.system.css';
+
+/* Notificación flotante moderna morada */
+ion-toast.toast-morado {
+  --background: #654ce6;
+  --color: #ffffff;
+  --border-radius: 16px;
+  --box-shadow: 0 8px 20px rgba(101, 76, 230, 0.35);
+  font-weight: 500;
+}
+
+/* Notificación flotante moderna verde */
+ion-toast.toast-verde {
+  --background: #19b896;
+  --color: #ffffff;
+  --border-radius: 16px;
+  --box-shadow: 0 8px 20px rgba(25, 184, 150, 0.35);
+  font-weight: 500;
+}

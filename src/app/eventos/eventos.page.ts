@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router'; // <-- AÑADE ESTA LÍNEA
 import {
   IonContent,
   IonButton,
@@ -10,7 +11,6 @@ import {
   IonTabBar,
   IonTabButton
 } from '@ionic/angular';
-// 1. Importamos el gestor de iconos y todos los iconos usados en el HTML
 import { addIcons } from 'ionicons';
 import {
   notificationsOutline,
@@ -26,8 +26,8 @@ import {
   templateUrl: './eventos.page.html',
   styleUrls: ['./eventos.page.scss'],
   standalone: true,
-  // 2. Añadimos todos los componentes de Ionic usados en eventos.page.html
   imports: [
+    RouterLink, // <-- Y AÑÁDELO AQUÍ DENTRO
     IonContent,
     IonButton,
     IonIcon,
@@ -41,7 +41,6 @@ import {
 })
 export class EventosPage {
   constructor() {
-    // 3. Registramos todos los iconos para que se muestren en pantalla
     addIcons({
       notificationsOutline,
       optionsOutline,
