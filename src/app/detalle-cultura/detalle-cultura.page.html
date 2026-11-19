@@ -1,0 +1,41 @@
+<ion-content class="fondo">
+
+  <div class="cabecera-azul">
+    <button class="btn-volver" (click)="volver()">
+      <ion-icon name="arrow-back-outline"></ion-icon>
+    </button>
+    <h1 class="titulo-evento">FESTIVAL CULTURAL</h1>
+  </div>
+
+  <div class="cuerpo">
+
+    <div class="info-fila">
+      <ion-icon name="time-outline"></ion-icon>
+      <span>2 oct, 12:00-15:00</span>
+    </div>
+
+    <div class="info-fila">
+      <ion-icon name="location-outline"></ion-icon>
+      <span>Salón de Actos</span>
+    </div>
+
+    <h3 class="seccion">DESCRIPCIÓN</h3>
+    <p class="texto">
+      Actuaciones de música, baile y teatro preparadas por los distintos cursos del instituto.
+    </p>
+
+    <h3 class="seccion">REQUISITOS</h3>
+    <p class="texto">
+      Entrada libre. Si vas a actuar, apúntate antes del 28 sep con tu tutor/a.
+    </p>
+
+    <button
+      class="btn-asistire"
+      [class.confirmado]="asistire"
+      (click)="confirmarAsistencia()">
+      {{ asistire ? '¡Asistencia confirmada!' : 'Asistiré' }}
+    </button>
+
+  </div>
+
+</ion-content>

@@ -1,0 +1,171 @@
+.fondo {
+  --background: #ffffff;
+  --padding-start: 20px;
+  --padding-end: 20px;
+  --padding-top: 24px;
+  --padding-bottom: 24px;
+}
+
+
+.cabecera {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 22px;
+
+  .boton-volver {
+    --background: #ece8fc;
+    --color: #654ce6;
+    --border-radius: 12px;
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    font-size: 20px;
+  }
+
+  .titulo {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #222222;
+  }
+}
+
+.etiqueta {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  color: #555555;
+  margin: 0 0 8px;
+}
+
+
+.caja-input {
+  width: 100%;
+  background: #f0edfb;
+  border: none;
+  border-radius: 14px;
+  padding: 14px 16px;
+  font-size: 14px;
+  color: #222222;
+  outline: none;
+  margin-bottom: 18px;
+
+  &::placeholder {
+    color: #9e99b5;
+  }
+}
+
+
+.categorias {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 18px;
+
+  .pildora {
+    background: #e5dffa;
+    color: #654ce6;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 20px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+
+    &.naranja {
+      background: #f56a38;
+      color: #ffffff;
+    }
+  }
+}
+
+
+.fila-doble {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 18px;
+
+  .columna {
+    flex: 1;
+  }
+}
+
+
+.caja-dato {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f0edfb;
+  border-radius: 14px;
+  padding: 12px 14px;
+
+  input, select {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color: #333333;
+    appearance: none;
+  }
+
+  .icono-morado {
+    color: #654ce6;
+    font-size: 20px;
+    flex-shrink: 0;
+  }
+
+  .guion-morado {
+    color: #654ce6;
+    font-size: 18px;
+    font-weight: 600;
+  }
+}
+
+.selector-lugar {
+  margin-bottom: 18px;
+}
+
+.caja-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f0edfb;
+  border-radius: 14px;
+  padding: 10px 16px;
+  margin-bottom: 24px;
+  font-size: 14px;
+  color: #333333;
+
+  .toggle-verde {
+    --track-background-checked: #19b896;
+    --handle-background-checked: #ffffff;
+  }
+}
+
+
+.btn-publicar {
+  width: 100%;
+  background: #654ce6;
+  color: #ffffff;
+  border: none;
+  border-radius: 14px;
+  padding: 15px;
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+
+
+.btn-borrador {
+  width: 100%;
+  background: #ffffff;
+  color: #654ce6;
+  border: 1px solid #654ce6;
+  border-radius: 14px;
+  padding: 14px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+}

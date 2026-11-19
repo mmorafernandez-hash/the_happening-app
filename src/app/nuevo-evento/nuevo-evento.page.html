@@ -1,0 +1,107 @@
+<ion-content [fullscreen]="true" class="fondo">
+
+  <div class="cabecera">
+    <ion-button routerLink="/perfil" fill="clear" class="boton-volver">
+      <ion-icon name="arrow-back-outline" slot="icon-only"></ion-icon>
+    </ion-button>
+    <h1 class="titulo">NUEVO EVENTO</h1>
+  </div>
+
+  <label class="etiqueta">TÍTULO</label>
+  <input
+    type="text"
+    [(ngModel)]="titulo"
+    placeholder="Ej. Feria de ciencias"
+    class="caja-input" />
+
+  <label class="etiqueta">CATEGORÍA</label>
+  <div class="categorias">
+    <button
+      type="button"
+      class="pildora"
+      [class.naranja]="categoriaSeleccionada === 'Ciencias'"
+      (click)="seleccionarCategoria('Ciencias')">
+      Ciencias
+    </button>
+    <button
+      type="button"
+      class="pildora"
+      [class.naranja]="categoriaSeleccionada === 'Deportes'"
+      (click)="seleccionarCategoria('Deportes')">
+      Deportes
+    </button>
+    <button
+      type="button"
+      class="pildora"
+      [class.naranja]="categoriaSeleccionada === 'Cultural'"
+      (click)="seleccionarCategoria('Cultural')">
+      Cultural
+    </button>
+  </div>
+
+
+  <div class="fila-doble">
+    <div class="columna">
+      <label class="etiqueta">FECHA</label>
+      <div class="caja-dato">
+        <input type="text" [(ngModel)]="fecha" />
+        <ion-icon name="calendar-outline" class="icono-morado"></ion-icon>
+      </div>
+    </div>
+
+    <div class="columna">
+      <label class="etiqueta">HORARIO</label>
+      <div class="caja-dato">
+        <input type="text" [(ngModel)]="horario" />
+        <ion-icon name="time-outline" class="icono-morado"></ion-icon>
+      </div>
+    </div>
+  </div>
+
+
+  <label class="etiqueta">LUGAR</label>
+  <div class="caja-dato selector-lugar">
+    <select [(ngModel)]="lugar">
+      <option value="Patio Central">Patio Central</option>
+      <option value="Salón de Actos">Salón de Actos</option>
+      <option value="Campo Fútbol Sala">Campo Fútbol Sala</option>
+      <option value="Pista Central">Pista Central</option>
+    </select>
+    <ion-icon name="chevron-down-outline" class="icono-morado"></ion-icon>
+  </div>
+
+
+  <div class="fila-doble">
+    <div class="columna">
+      <label class="etiqueta">AFORO</label>
+      <div class="caja-dato">
+        <input type="number" [(ngModel)]="aforo" />
+        <span class="guion-morado">–</span>
+      </div>
+    </div>
+
+    <div class="columna">
+      <label class="etiqueta">INSCRIPCIÓN HASTA</label>
+      <div class="caja-dato">
+        <input type="text" [(ngModel)]="inscripcionHasta" />
+        <ion-icon name="calendar-outline" class="icono-morado"></ion-icon>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="caja-toggle">
+    <span>Activar lista de espera</span>
+    <ion-toggle [(ngModel)]="listaEspera" class="toggle-verde"></ion-toggle>
+  </div>
+
+
+  <button type="button" class="btn-publicar" (click)="publicarEvento()">
+    Publicar evento
+  </button>
+
+  <button type="button" class="btn-borrador" (click)="guardarBorrador()">
+    Guardar borrador
+  </button>
+
+</ion-content>

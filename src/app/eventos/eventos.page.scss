@@ -1,4 +1,3 @@
-/* Fondo blanco general y márgenes interiores de la pantalla */
 .fondo {
   --background: #ffffff;
   --padding-start: 16px;
@@ -8,15 +7,15 @@
 
 /* cabecera superior */
 .cabecera {
-  display: flex;                  /* Pone el perfil a la izquierda y la campana a la derecha */
-  justify-content: space-between; /* Separa ambos bloques a los extremos */
-  align-items: center;            /* Los alinea verticalmente al centro */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 16px;
 
   .perfil {
     display: flex;
     align-items: center;
-    gap: 12px;                    /* Espacio entre el logo morado y los textos */
+    gap: 12px;
   }
 
   /* Cuadrado morado del logo */
@@ -24,7 +23,7 @@
     width: 48px;
     height: 48px;
     background: #654ce6;
-    border-radius: 14px;          /* Bordes redondeados */
+    border-radius: 14px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -32,11 +31,11 @@
     img {
       width: 28px;
       height: 28px;
-      object-fit: contain;        /* Ajusta el icono sin deformarlo */
+      object-fit: contain;
     }
   }
 
-  /* Textos de saludo apilados uno debajo de otro */
+
   .saludo {
     display: flex;
     flex-direction: column;
@@ -93,7 +92,7 @@
     width: 44px;
     margin: 0;
 
-    /* Fuerza el icono de las rayitas a color blanco */
+
     ion-icon {
       color: #ffffff;
     }
@@ -108,18 +107,18 @@
   width: 100%;
 
   ion-chip {
-    flex: 1;                      /* Hace que las 3 ocupen exactamente el mismo ancho */
-    justify-content: center;      /* Centra el texto dentro de cada píldora */
-    --background: #eae7fa;        /* Fondo lila claro por defecto */
+    flex: 1;
+    justify-content: center;
+    --background: #eae7fa;
     --color: #666666;
     font-size: 11px;
     font-weight: 600;
     margin: 0;
 
-    /* Estilo especial para la categoría seleccionada */
+
     &.activo {
-      --background: #654ce6;      /* Fondo morado intenso */
-      --color: #ffffff;           /* Texto blanco */
+      --background: #654ce6;
+      --color: #ffffff;
     }
   }
 }
@@ -136,19 +135,19 @@
 .tarjeta {
   margin: 0 0 16px 0;
   border-radius: 16px;
-  background: #f5f4f9;            /* Gris muy claro para el cuerpo de la tarjeta */
-  box-shadow: none;               /* Quita la sombra por defecto de ion-card */
-  overflow: hidden;               /* Recorta la imagen para que respete los bordes redondeados */
+  background: #f5f4f9;
+  box-shadow: none;
+  overflow: hidden;
 
-  /* Contenedor de la foto */
+
   .portada {
-    position: relative;           /* Necesario para posicionar la etiqueta y la sombra encima */
+    position: relative;
     height: 130px;
 
     img {
       width: 100%;
       height: 100%;
-      object-fit: cover;          /* Rellena toda la portada sin deformar la foto */
+      object-fit: cover;
     }
 
     /* Etiqueta roja  */
@@ -164,7 +163,7 @@
       border-radius: 8px;
     }
 
-    /* Degradado negro inferior sobre la foto para leer el título */
+
     .sombra {
       position: absolute;
       bottom: 0;
@@ -209,7 +208,7 @@
           height: 18px;
           border-radius: 50%;
           border: 2px solid #ffffff;
-          margin-right: -6px;     /* Hace que un círculo monte encima del anterior */
+          margin-right: -6px;
 
           &.amarillo { background: #ffca28; }
           &.azul { background: #42a5f5; }
@@ -241,7 +240,6 @@
   ion-tab-button {
     --color: #666666;
 
-    /* Icono activo en morado */
     &.activa {
       --color: #654ce6;
     }

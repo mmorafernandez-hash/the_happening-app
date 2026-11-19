@@ -53,3 +53,408 @@ ion-toast.toast-verde {
   --box-shadow: 0 8px 20px rgba(25, 184, 150, 0.35);
   font-weight: 500;
 }
+
+/* MODO OSCURO PARA TODA LA APP */
+body.oscuro {
+  --ion-background-color: #121212;
+  --ion-text-color: #ffffff;
+  --ion-item-background: #1e1e1e;
+  --ion-card-background: #1e1e1e;
+  --ion-toolbar-background: #1a1a1a;
+  --ion-tab-bar-background: #1a1a1a;
+  --ion-border-color: #2c2c2c;
+}
+
+/* Fondos y contenedores */
+body.oscuro ion-content,
+body.oscuro .fondo,
+body.oscuro .cuerpo {
+  --background: #121212 !important;
+  background: #121212 !important;
+  color: #ffffff !important;
+}
+
+/* Barras, cabeceras y menús */
+body.oscuro ion-header,
+body.oscuro ion-footer,
+body.oscuro ion-toolbar,
+body.oscuro ion-tab-bar,
+body.oscuro .menu,
+body.oscuro .pie-comentario {
+  --background: #1a1a1a !important;
+  background: #1a1a1a !important;
+  color: #ffffff !important;
+  border-color: #2c2c2c !important;
+}
+
+/* Botones, tarjetas y cajas que eran blancas o grises claras */
+body.oscuro .opcion,
+body.oscuro .comentario,
+body.oscuro ion-card,
+body.oscuro ion-item,
+body.oscuro ion-list {
+  --background: #1e1e1e !important;
+  background: #1e1e1e !important;
+  border-color: #2c2c2c !important;
+  color: #ffffff !important;
+}
+
+/* Textos e inputs */
+body.oscuro h1,
+body.oscuro h2,
+body.oscuro h3,
+body.oscuro h4,
+body.oscuro p,
+body.oscuro span,
+body.oscuro strong,
+body.oscuro label,
+body.oscuro input {
+  color: #ffffff !important;
+}
+
+body.oscuro .datos span {
+  color: #aaaaaa !important;
+}
+
+/* Iconos generales (respetando los iconos con colores propios) */
+body.oscuro ion-icon {
+  color: #ffffff;
+}
+
+body.oscuro ion-tab-button {
+  --color: #888888;
+  --color-selected: #8b75ff;
+}
+
+body.oscuro .activa ion-icon,
+body.oscuro .flecha,
+body.oscuro .campana ion-icon {
+  color: #8b75ff !important;
+}
+
+/* Mantiene los colores de los textos especiales y cajas de iconos */
+body.oscuro .texto-rojo,
+body.oscuro .rojo ion-icon {
+  color: #ff6b57 !important;
+}
+
+body.oscuro .verde ion-icon,
+body.oscuro .pildora-verde {
+  color: #2ce0a6 !important;
+}
+
+body.oscuro .lila ion-icon {
+  color: #654ce6 !important;
+}
+
+/* Oscurece un poco el fondo de las cajitas de iconos para que no brillen tanto */
+body.oscuro .lila { background: #262040 !important; }
+body.oscuro .verde { background: #16332a !important; }
+body.oscuro .rojo { background: #3b1e1b !important; }
+
+/* Buscador ("Buscar eventos") */
+body.oscuro ion-searchbar {
+  --background: #1e1e1e !important;
+  --color: #ffffff !important;
+  --placeholder-color: #aaaaaa !important;
+  --icon-color: #8b75ff !important;
+}
+
+body.oscuro .searchbar-input-container,
+body.oscuro input[type="search"],
+body.oscuro input[type="text"] {
+  background: #1e1e1e !important;
+  color: #ffffff !important;
+}
+
+/* Botones de filtro ("DEPORTES", "OTROS EVENTOS") */
+body.oscuro ion-segment,
+body.oscuro ion-segment-button,
+body.oscuro ion-chip {
+  --background: #1e1e1e !important;
+  --color: #cccccc !important;
+  background: #1e1e1e !important;
+  color: #cccccc !important;
+}
+
+/* Mantiene el botón activo morado ("TODOS") */
+body.oscuro ion-segment-button.segment-button-checked {
+  --background: #654ce6 !important;
+  --color: #ffffff !important;
+  background: #654ce6 !important;
+  color: #ffffff !important;
+}
+
+/* Calendario completo (ion-datetime) */
+body.oscuro ion-datetime {
+  --background: #1e1e1e !important;
+  --title-color: #ffffff !important;
+  color: #ffffff !important;
+  background: #1e1e1e !important;
+}
+
+body.oscuro ion-datetime::part(calendar-day) {
+  color: #ffffff !important;
+}
+
+body.oscuro ion-datetime::part(calendar-day active) {
+  background: #654ce6 !important;
+  color: #ffffff !important;
+}
+
+body.oscuro ion-datetime::part(month-year-button) {
+  color: #ffffff !important;
+}
+/* === MODO OSCURO PARA PASAR LISTA Y NUEVO EVENTO === */
+
+/* Botón de volver atrás (arriba a la izquierda) */
+body.oscuro .boton-volver {
+  --background: #262040 !important;
+  background: #262040 !important;
+  color: #8b75ff !important;
+}
+
+body.oscuro .boton-volver ion-icon {
+  color: #8b75ff !important;
+}
+
+/* Pasar lista: caja de progreso, barra de fondo y buscador */
+body.oscuro .caja-progreso,
+body.oscuro .caja-buscador {
+  background: #1e1e1e !important;
+  border-color: #2c2c2c !important;
+}
+
+body.oscuro .barra-fondo {
+  background: #2c2c2c !important;
+}
+
+body.oscuro .etiqueta-morada {
+  color: #8b75ff !important;
+}
+
+/* Avatares de alumnos en Pasar lista */
+body.oscuro .fila-alumno .avatar {
+  background: #262040 !important;
+  color: #8b75ff !important;
+}
+
+body.oscuro .fila-alumno {
+  border-bottom-color: #2c2c2c !important;
+}
+
+/* Nuevo evento: cajas de fecha, horario, lugar, aforo y toggle */
+body.oscuro .caja-input,
+body.oscuro .caja-dato,
+body.oscuro .caja-toggle,
+body.oscuro .btn-borrador {
+  background: #1e1e1e !important;
+  border-color: #2c2c2c !important;
+  color: #ffffff !important;
+}
+
+/* Desplegable de lugar (select y sus opciones) */
+body.oscuro .selector-lugar select,
+body.oscuro .selector-lugar option {
+  background: #1e1e1e !important;
+  color: #ffffff !important;
+}
+
+/* Píldoras de categoría ("Deportes", "Cultural") */
+body.oscuro .pildora {
+  background: #262040 !important;
+  color: #8b75ff !important;
+}
+
+/* Mantiene naranja la categoría seleccionada ("Ciencias") */
+body.oscuro .pildora.naranja {
+  background: #f26522 !important;
+  color: #ffffff !important;
+}
+
+/* Iconos morados dentro de los inputs */
+body.oscuro .icono-morado,
+body.oscuro .icono-lupa,
+body.oscuro .guion-morado {
+  color: #8b75ff !important;
+}
+/* === MODO OSCURO PARA DETALLES DE EVENTO Y MODAL QR === */
+
+/* Textos e iconos de información (hora, lugar, descripción) */
+body.oscuro .info-fila span,
+body.oscuro .texto {
+  color: #e0e0e0 !important;
+}
+
+body.oscuro .info-fila ion-icon,
+body.oscuro .seccion {
+  color: #8b75ff !important;
+}
+
+/* Selector de estado ("ASISTIRE" / "ME INTERESA") */
+body.oscuro .selector-estado {
+  background: #1e1e1e !important;
+  border-color: #2c2c2c !important;
+}
+
+body.oscuro .selector-estado .opcion {
+  background: transparent !important;
+  color: #aaaaaa !important;
+}
+
+body.oscuro .selector-estado .opcion.activa {
+  background: #654ce6 !important;
+  color: #ffffff !important;
+}
+
+/* Modal de la entrada QR */
+body.oscuro ion-modal {
+  --background: #181818 !important;
+}
+
+body.oscuro .contenedor-qr {
+  background: #181818 !important;
+  color: #ffffff !important;
+}
+
+body.oscuro .barra-superior {
+  background: #3a3a3a !important;
+}
+
+body.oscuro .titulo-qr,
+body.oscuro .asistente-qr,
+body.oscuro .asistente-qr strong {
+  color: #ffffff !important;
+}
+
+body.oscuro .subtitulo-qr {
+  color: #aaaaaa !important;
+}
+
+/* Recuadro del código QR (con icono claro para que sea legible) */
+body.oscuro .caja-qr {
+  background: #242424 !important;
+  border-color: #333333 !important;
+}
+
+body.oscuro .icono-qr,
+body.oscuro .codigo-texto {
+  color: #ffffff !important;
+}
+
+/* Botón Cerrar del modal */
+body.oscuro .btn-cerrar-qr {
+  background: #262040 !important;
+  color: #8b75ff !important;
+}
+/* === MODO OSCURO PARA INFORMES === */
+
+/* Contenedor principal de Informes */
+body.oscuro .pantalla-fija {
+  background: #121212 !important;
+  color: #ffffff !important;
+}
+
+/* Filtros superiores ("Este mes", "Trimestre", "Curso") */
+body.oscuro .filtros .pildora {
+  background: #1e1e1e !important;
+  color: #aaaaaa !important;
+  border-color: #2c2c2c !important;
+}
+
+body.oscuro .filtros .pildora.activa {
+  background: #654ce6 !important;
+  color: #ffffff !important;
+  border-color: #654ce6 !important;
+}
+
+/* Tarjetas de resumen ("Participación" y "Eventos") */
+body.oscuro .tarjeta-dato {
+  background: #1e1e1e !important;
+  border-color: #2c2c2c !important;
+}
+
+body.oscuro .tarjeta-dato .etiqueta {
+  color: #aaaaaa !important;
+}
+
+body.oscuro .tarjeta-dato .valor {
+  color: #ffffff !important;
+}
+
+/* Bloques de barras ("POR CATEGORÍA" y "POR CURSO") */
+body.oscuro .lista-barras,
+body.oscuro .scroll-cursos {
+  background: #1e1e1e !important;
+  border-color: #2c2c2c !important;
+}
+
+body.oscuro .fila-barra .nombre,
+body.oscuro .fila-barra .porcentaje {
+  color: #e0e0e0 !important;
+}
+
+/* Fondo de las barras de progreso */
+body.oscuro .fila-barra .barra-fondo {
+  background: #2c2c2c !important;
+}
+/* Botón Exportar informe (abajo) */
+body.oscuro .btn-exportar {
+  background: #1e1e1e !important;
+  border-color: #654ce6 !important;
+  color: #8b75ff !important;
+}
+
+body.oscuro .btn-exportar span,
+body.oscuro .btn-exportar ion-icon {
+  color: #8b75ff !important;
+}
+
+/* Botón de volver atrás (arriba a la izquierda) */
+body.oscuro .cabecera .btn-volver {
+  background: #262040 !important;
+  color: #8b75ff !important;
+}
+
+body.oscuro .cabecera .btn-volver ion-icon {
+  color: #8b75ff !important;
+}
+/* === MODO OSCURO PARA NOTIFICACIONES === */
+
+/* Banner claro de "Torneo de Futbol" (para que no deslumbre en modo oscuro) */
+body.oscuro .banner-evento.claro .capa-clara {
+  background: rgba(18, 18, 18, 0.72) !important;
+}
+
+body.oscuro .banner-evento.claro .info h4,
+body.oscuro .banner-evento.claro .info p,
+body.oscuro .banner-evento.claro .icono-izq {
+  color: #ffffff !important;
+}
+
+/* Tarjetas de la sección AVISOS */
+body.oscuro .aviso {
+  background: #1e1e1e !important;
+  border-color: #2c2c2c !important;
+}
+
+body.oscuro .texto-aviso h4 {
+  color: #ffffff !important;
+}
+
+body.oscuro .texto-aviso span {
+  color: #aaaaaa !important;
+}
+
+/* Barra de navegación inferior (footer) */
+body.oscuro ion-tab-bar.menu {
+  --background: #181818 !important;
+  background: #181818 !important;
+  border-top: 1px solid #2c2c2c !important;
+}
+
+body.oscuro ion-tab-bar.menu ion-tab-button {
+  --background: #181818 !important;
+  --color: #888888 !important;
+  --color-selected: #8b75ff !important;
+}

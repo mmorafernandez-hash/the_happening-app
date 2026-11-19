@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router'; // 1. Importamos RouterLink
+import { RouterLink } from '@angular/router';
 import {
   IonHeader,
   IonToolbar,
@@ -16,7 +16,7 @@ import {
   styleUrls: ['home.page.scss'],
   standalone: true,
   imports: [
-    RouterLink, // 2. Lo añadimos a los imports del componente
+    RouterLink,
     IonHeader,
     IonToolbar,
     IonTitle,

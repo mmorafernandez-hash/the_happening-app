@@ -1,0 +1,219 @@
+.fondo {
+  --background: #ffffff;
+  --padding-start: 16px;
+  --padding-end: 16px;
+  --padding-top: 20px;
+}
+
+.cabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+
+  .perfil {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .logo {
+    width: 48px;
+    height: 48px;
+    background: #654ce6;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 28px;
+      height: 28px;
+      object-fit: contain;
+    }
+  }
+
+  .saludo {
+    .hola {
+      display: block;
+      font-size: 11px;
+      color: #999999;
+      font-weight: 600;
+    }
+
+    .nombre {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 700;
+      color: #222222;
+    }
+
+    .rol {
+      font-size: 12px;
+      color: #666666;
+    }
+  }
+
+  .campana {
+    --color: #654ce6;
+    font-size: 24px;
+  }
+}
+
+/* Buscador y botón morado */
+.buscador {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+
+  .barra {
+    --background: #eae7fa;
+    --border-radius: 20px;
+    --box-shadow: none;
+    --icon-color: #654ce6;
+    --color: #222222;
+    --placeholder-color: #666666;
+    --placeholder-opacity: 1;
+    padding: 0;
+  }
+
+  .filtro {
+    --background: #654ce6;
+    --color: #ffffff;
+    --border-radius: 12px;
+    height: 42px;
+    width: 44px;
+    margin: 0;
+  }
+}
+
+/* Píldoras de categorías */
+.categorias {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 18px;
+  width: 100%;
+
+  ion-chip {
+    flex: 1;
+    justify-content: center;
+    height: 36px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 700;
+    --background: #ebe7fc;
+    --color: #654ce6;
+    margin: 0;
+
+    &.activo {
+      --background: #654ce6;
+      --color: #ffffff;
+    }
+  }
+}
+
+/* proximos eventos el subtitulo en morao */
+.subtitulo {
+  color: #654ce6;
+  font-size: 13px;
+  font-weight: 700;
+  margin: 0 0 12px;
+  letter-spacing: 0.4px;
+}
+
+/* Tarjeta del evento */
+.tarjeta {
+  margin: 0 0 16px;
+  border-radius: 16px;
+  background: #f5f4f9;
+  box-shadow: none;
+  overflow: hidden;
+
+  .portada {
+    position: relative;
+    height: 150px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .sombra {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      padding: 20px 12px 8px;
+      background: linear-gradient(transparent, rgba(0, 0, 0, 0.75));
+
+      h4 {
+        margin: 0;
+        color: #ffffff;
+        font-size: 16px;
+        font-weight: 700;
+      }
+    }
+  }
+
+  .detalles {
+    padding: 10px 14px;
+
+    .fecha {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: #444444;
+      font-size: 12px;
+      margin-bottom: 8px;
+    }
+
+    .pie {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .avatares {
+        display: flex;
+        align-items: center;
+
+        .circulo {
+          width: 18px;
+          height: 18px;
+          border-radius: 50%;
+          border: 2px solid #ffffff;
+          margin-right: -6px;
+
+          &.amarillo { background: #ffca28; }
+          &.azul { background: #42a5f5; }
+          &.morado { background: #654ce6; margin-right: 8px; }
+        }
+
+        .inscritos {
+          font-size: 11px;
+          color: #666666;
+        }
+      }
+
+      .enlace {
+        color: #654ce6;
+        font-size: 12px;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+/* Barra inferior */
+.menu {
+  --background: #ffffff;
+  border-top: 1px solid #eeeeee;
+
+  ion-tab-button {
+    --color: #666666;
+
+    &.activa {
+      --color: #654ce6;
+    }
+  }
+}

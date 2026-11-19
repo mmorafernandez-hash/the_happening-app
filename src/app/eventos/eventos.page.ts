@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router'; // <-- AÑADE ESTA LÍNEA
+import { RouterLink } from '@angular/router';
 import {
   IonContent,
   IonButton,
@@ -27,7 +27,7 @@ import {
   styleUrls: ['./eventos.page.scss'],
   standalone: true,
   imports: [
-    RouterLink, // <-- Y AÑÁDELO AQUÍ DENTRO
+    RouterLink,
     IonContent,
     IonButton,
     IonIcon,

@@ -1,0 +1,82 @@
+<ion-content [fullscreen]="true" class="fondo">
+
+  <div class="cabecera">
+    <div class="perfil">
+      <div class="logo">
+        <img src="assets/icon/pasa_logo.png" alt="Logo">
+      </div>
+      <div class="saludo">
+        <span class="hola">HOLA,</span>
+        <h2 class="nombre">Mario Mora</h2>
+        <span class="rol">Profesor · Organizador</span>
+      </div>
+    </div>
+
+    <ion-button routerLink="/notificaciones" fill="clear" class="campana">
+      <ion-icon name="notifications-outline" slot="icon-only"></ion-icon>
+    </ion-button>
+  </div>
+
+  <!-- buscador -->
+  <div class="buscador">
+    <ion-searchbar placeholder="Buscar eventos" class="barra"></ion-searchbar>
+    <ion-button class="filtro">
+      <ion-icon name="options-outline" slot="icon-only"></ion-icon>
+    </ion-button>
+  </div>
+
+  <!-- calendario oficial de ionic -->
+  <div class="caja-calendario">
+    <ion-datetime
+      presentation="date"
+      [value]="fechaSeleccionada"
+      (ionChange)="cambiarFecha($event)"
+      class="calendario-ionic">
+    </ion-datetime>
+  </div>
+
+  <h3 class="fecha-titulo">{{ textoFecha }}</h3>
+
+  <ion-card class="tarjeta" routerLink="/detalle-futbol">
+    <div class="portada">
+      <img src="assets/icon/mundial.jpg" alt="Torneo de Futbol" />
+      <div class="sombra">
+        <h4>TORNEO DE FUTBOL</h4>
+      </div>
+    </div>
+
+    <div class="detalles">
+      <div class="fecha">
+        <ion-icon name="calendar-outline"></ion-icon>
+        <span>24 sept - 12:00 - Salón de Actos</span>
+      </div>
+      <div class="pie">
+        <div class="avatares">
+          <span class="circulo amarillo"></span>
+          <span class="circulo azul"></span>
+          <span class="circulo morado"></span>
+          <span class="inscritos">Faltan 3 equipos más</span>
+        </div>
+        <a class="enlace">Ver más</a>
+      </div>
+    </div>
+  </ion-card>
+
+</ion-content>
+
+<ion-footer>
+  <ion-tab-bar slot="bottom" class="menu">
+    <ion-tab-button routerLink="/eventos">
+      <ion-icon name="home-outline"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button routerLink="/tickets">
+      <ion-icon name="ticket-outline"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button routerLink="/calendario" class="activa">
+      <ion-icon name="calendar-outline"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button routerLink="/perfil">
+      <ion-icon name="person-outline"></ion-icon>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-footer>

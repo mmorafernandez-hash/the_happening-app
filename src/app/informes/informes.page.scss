@@ -1,0 +1,212 @@
+.fondo {
+  --background: #ffffff;
+}
+
+
+.pantalla-fija {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 20px;
+  box-sizing: border-box;
+}
+
+
+.cabecera {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+  flex-shrink: 0;
+
+  .btn-volver {
+    width: 38px;
+    height: 38px;
+    border-radius: 12px;
+    background: #ece8fc;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #654ce6;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  .titulo {
+    margin: 0;
+    font-size: 19px;
+    font-weight: 700;
+    color: #222222;
+    letter-spacing: 0.4px;
+  }
+}
+
+
+.filtros {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 18px;
+  flex-shrink: 0;
+
+  .pildora {
+    padding: 9px 18px;
+    border-radius: 20px;
+    border: none;
+    background: #ebe7fc;
+    color: #654ce6;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &.activa {
+      background: #654ce6;
+      color: #ffffff;
+    }
+  }
+}
+
+
+.resumen {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 22px;
+  flex-shrink: 0;
+
+  .tarjeta-dato {
+    background: #f3f0fc;
+    border-radius: 16px;
+    padding: 14px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    .etiqueta {
+      font-size: 13px;
+      color: #555555;
+      font-weight: 500;
+    }
+
+    .valor {
+      font-size: 26px;
+      font-weight: 700;
+      color: #654ce6;
+      line-height: 1.1;
+    }
+  }
+}
+
+
+.seccion {
+  font-size: 13px;
+  font-weight: 700;
+  color: #654ce6;
+  margin: 0 0 12px;
+  letter-spacing: 0.4px;
+  flex-shrink: 0;
+}
+
+
+.lista-barras {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 22px;
+  flex-shrink: 0;
+}
+
+
+.scroll-cursos {
+  flex: 1;
+  min-height: 0;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding-right: 8px;
+  margin-bottom: 16px;
+}
+
+
+.fila-barra {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  .nombre {
+    width: 84px;
+    font-size: 13px;
+    color: #555555;
+    flex-shrink: 0;
+  }
+
+  .barra-fondo {
+    flex: 1;
+    height: 10px;
+    background: #f1effa;
+    border-radius: 999px;
+    overflow: hidden;
+
+    .barra-relleno {
+      height: 100%;
+      border-radius: 999px;
+      transition: width 0.3s ease;
+
+      &.morado {
+        background: #654ce6;
+      }
+    }
+  }
+
+  .porcentaje {
+    width: 34px;
+    text-align: right;
+    font-size: 13px;
+    font-weight: 600;
+    color: #444444;
+    flex-shrink: 0;
+  }
+}
+
+
+.scroll-cursos::-webkit-scrollbar {
+  width: 5px;
+}
+
+.scroll-cursos::-webkit-scrollbar-track {
+  background: #f1effa;
+  border-radius: 10px;
+}
+
+.scroll-cursos::-webkit-scrollbar-thumb {
+  background: #654ce6;
+  border-radius: 10px;
+}
+
+
+.btn-exportar {
+  width: 100%;
+  padding: 14px;
+  border-radius: 16px;
+  border: 1.5px solid #654ce6;
+  background: #ffffff;
+  color: #654ce6;
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  flex-shrink: 0;
+
+  ion-icon {
+    font-size: 19px;
+  }
+
+  &:active {
+    background: #f3f0fc;
+  }
+}

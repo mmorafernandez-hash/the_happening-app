@@ -47,7 +47,36 @@ export const routes: Routes = [
     loadComponent: () => import('./nuevo-evento/nuevo-evento.page').then( m => m.NuevoEventoPage)
   },
   {
-    path: 'pasar-lista',
-    loadComponent: () => import('./pasar-lista/pasar-lista.page').then( m => m.PasarListaPage)
+    path: 'informes',
+    loadComponent: () => import('./informes/informes.page').then( m => m.InformesPage)
   },
+  {
+    path: 'detalle-futbol',
+    loadComponent: () => import('./detalle-futbol/detalle-futbol.page').then( m => m.DetalleFutbolPage)
+  },
+  {
+    path: 'detalle-ciencias',
+    loadComponent: () => import('./detalle-ciencias/detalle-ciencias.page').then( m => m.DetalleCienciasPage)
+  },
+  {
+    path: 'detalle-cultura',
+    loadComponent: () => import('./detalle-cultura/detalle-cultura.page').then( m => m.DetalleCulturaPage)
+  },
+  {
+    path: 'entrada-cultural',
+    loadComponent: () => import('./entrada-cultural/entrada-cultural.page').then(m => m.EntradaCulturalPage)
+  },
+  {
+    path: 'entrada-ciencias',
+    loadComponent: () => import('./entrada-ciencias/entrada-ciencias.page').then( m => m.EntradaCienciasPage)
+  },
+  {
+    path: 'resultados-futbol',
+    loadComponent: () => import('./resultados-futbol/resultados-futbol.page').then( m => m.ResultadosFutbolPage)
+  },
+  {
+    path: 'pasar-lista',
+    loadComponent: () => import('./pasar-lista/pasar-lista.page').then(m => m.PasarListaPage)
+  },
+
 ];

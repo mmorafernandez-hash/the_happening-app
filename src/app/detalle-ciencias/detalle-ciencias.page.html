@@ -1,0 +1,41 @@
+<ion-content class="fondo">
+
+  <div class="cabecera-naranja">
+    <button class="btn-volver" (click)="volver()">
+      <ion-icon name="arrow-back-outline"></ion-icon>
+    </button>
+    <h1 class="titulo-evento">FERIA DE CIENCIAS</h1>
+  </div>
+
+  <div class="cuerpo">
+
+    <div class="info-fila">
+      <ion-icon name="time-outline"></ion-icon>
+      <span>24 sep, 10:00-14:00</span>
+    </div>
+
+    <div class="info-fila">
+      <ion-icon name="location-outline"></ion-icon>
+      <span>Patio Central</span>
+    </div>
+
+    <h3 class="seccion">DESCRIPCIÓN</h3>
+    <p class="texto">
+      Presenta tu proyecto o visita los stands de tus compañeros de ciencias. Habrá premios para los 3 mejores proyectos.
+    </p>
+
+    <h3 class="seccion">REQUISITOS</h3>
+    <p class="texto">
+      Inscripción previa si vas a participar con un proyecto. No es necesaria si solo vas a visitar.
+    </p>
+
+    <button
+      class="btn-asistire"
+      [class.confirmado]="asistire"
+      (click)="confirmarAsistencia()">
+      {{ asistire ? '¡Asistencia confirmada!' : 'Asistiré' }}
+    </button>
+
+  </div>
+
+</ion-content>

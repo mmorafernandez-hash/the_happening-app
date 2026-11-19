@@ -1,0 +1,166 @@
+.cabecera-morada {
+  background: #654ce6;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  color: #ffffff;
+
+
+  .boton-volver {
+    --background: rgba(255, 255, 255, 0.25);
+    --color: #ffffff;
+    --border-radius: 12px;
+    width: 42px;
+    height: 42px;
+    margin: 0;
+    font-size: 22px;
+  }
+
+  .titulo {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+
+  .campana-blanca {
+    font-size: 28px;
+  }
+}
+
+
+.fondo {
+  --background: #ffffff;
+  --padding-start: 16px;
+  --padding-end: 16px;
+  --padding-top: 16px;
+}
+
+
+.seccion {
+  color: #222222;
+  font-size: 14px;
+  font-weight: 700;
+  margin: 4px 0 12px;
+}
+
+
+.banner-evento {
+  position: relative;
+  height: 74px;
+  border-radius: 22px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  gap: 14px;
+  margin-bottom: 14px;
+
+
+  .fondo-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+  }
+
+  .capa-oscura {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1;
+  }
+
+  .capa-clara {
+    position: absolute;
+    inset: 0;
+    background: rgba(116, 158, 72, 0.55);
+    z-index: 1;
+  }
+
+  .icono-izq, .info {
+    position: relative;
+    z-index: 2;
+  }
+
+  .icono-izq {
+    font-size: 34px;
+    flex-shrink: 0;
+  }
+
+  .info {
+    h4 {
+      margin: 0 0 2px;
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    p {
+      margin: 0;
+      font-size: 12px;
+    }
+  }
+
+
+  &.oscuro {
+    color: #ffffff;
+  }
+
+
+  &.claro {
+    color: #1e2a14;
+  }
+}
+
+
+.aviso {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border: 1px solid #999999;
+  border-radius: 18px;
+  padding: 14px 16px;
+  margin-bottom: 12px;
+  background: #ffffff;
+
+  .icono-aviso {
+    font-size: 28px;
+    flex-shrink: 0;
+
+    &.verde { color: #00965e; }
+    &.rojo { color: #f44336; }
+    &.azul { color: #3b82f6; }
+  }
+
+  .texto-aviso {
+    h4 {
+      margin: 0 0 4px;
+      font-size: 14px;
+      font-weight: 700;
+      color: #222222;
+      line-height: 1.25;
+    }
+
+    span {
+      font-size: 11px;
+      color: #666666;
+    }
+  }
+}
+
+
+.menu {
+  --background: #ffffff;
+  border-top: 1px solid #eeeeee;
+
+  ion-tab-button {
+    --color: #666666;
+
+    &.activa {
+      --color: #654ce6;
+    }
+  }
+}

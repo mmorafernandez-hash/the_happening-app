@@ -1,0 +1,72 @@
+<ion-content class="fondo">
+
+  <div class="cabecera-amarilla">
+    <button class="btn-volver" routerLink="/tickets">
+      <ion-icon name="arrow-back-outline"></ion-icon>
+    </button>
+    <div class="titulo-bloque">
+      <h1 class="titulo-evento">TORNEO DE FÚTBOL</h1>
+      <p class="subtitulo-evento">12 nov · Campo Fútbol Sala</p>
+    </div>
+  </div>
+
+  <div class="cuerpo">
+
+    <div class="tarjeta-ganador">
+      <ion-icon name="trophy-outline"></ion-icon>
+      <div>
+        <strong>4ºB — Los Yonkis</strong>
+        <span>Equipo Ganador</span>
+      </div>
+    </div>
+
+    <div class="cabecera-seccion">
+      <h3>FOTOS</h3>
+      <span class="btn-anadir">+ AÑADIR</span>
+    </div>
+
+    <div class="rejilla-fotos">
+      <img src="assets/icon/fut1.jpg" alt="Foto 1" />
+      <img src="assets/icon/fut2.jpg" alt="Foto 2" />
+      <img src="assets/icon/fut3.jpg" alt="Foto 3" />
+      <img src="assets/icon/fut4.jpg" alt="Foto 4" />
+      <img src="assets/icon/fut5.jpg" alt="Foto 5" />
+      <button class="caja-mas">
+        <ion-icon name="add-outline"></ion-icon>
+      </button>
+    </div>
+
+    <div class="cabecera-seccion">
+      <h3>COMENTARIOS</h3>
+    </div>
+
+    <div class="lista-comentarios">
+
+      <div class="comentario">
+        <span class="avatar" style="background-color: #ffd000;">C</span>
+        <p>La patada de Carlos era de color amarillo tirando para naranja.</p>
+      </div>
+
+      <div class="comentario">
+        <span class="avatar" style="background-color: #3880ff;">P</span>
+        <p>Que partidazo el de Los Yonkis contras Los Inazuma España</p>
+      </div>
+
+      <div class="comentario">
+        <span class="avatar" style="background-color: #eb445a;">M</span>
+        <p>Javier Molina MVP del torneo jugadorazo</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</ion-content>
+
+<ion-footer class="pie-comentario">
+  <span class="avatar-usuario">S</span>
+  <input type="text" placeholder="Escribe un comentario..." />
+  <button class="btn-enviar">
+    <ion-icon name="paper-plane-outline"></ion-icon>
+  </button>
+</ion-footer>

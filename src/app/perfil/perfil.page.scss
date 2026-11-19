@@ -1,0 +1,142 @@
+.fondo {
+  --background: #ffffff;
+  --padding-start: 18px;
+  --padding-end: 18px;
+  --padding-top: 24px;
+}
+
+.cabecera, .opcion, .izq {
+  display: flex;
+  align-items: center;
+}
+
+.cabecera, .opcion {
+  justify-content: space-between;
+}
+
+.cabecera {
+  margin-bottom: 18px;
+}
+
+.titulo-perfil, .seccion {
+  color: #654ce6;
+  font-weight: 700;
+}
+
+.titulo-perfil {
+  font-size: 18px;
+  margin: 0;
+}
+
+.campana {
+  --color: #654ce6;
+  font-size: 24px;
+  margin: 0;
+}
+
+.usuario {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 26px;
+}
+
+.avatar {
+  width: 66px;
+  height: 66px;
+  border-radius: 18px;
+  background: #654ce6;
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.datos h3 {
+  margin: 0 0 4px;
+  font-size: 18px;
+  color: #222222;
+}
+
+.datos span {
+  font-size: 13px;
+  color: #777777;
+}
+
+.seccion {
+  font-size: 13px;
+  margin: 16px 0 12px;
+}
+
+.opcion {
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #eceaf6;
+  border-radius: 16px;
+  padding: 10px 14px;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+
+.izq {
+  gap: 14px;
+}
+
+.izq span {
+  font-size: 15px;
+  font-weight: 500;
+  color: #222222;
+}
+
+.texto-rojo {
+  color: #c94a38 !important;
+}
+
+.caja-icono {
+  width: 38px;
+  height: 38px;
+  border-radius: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.morado-fuerte { background: #654ce6; color: #ffffff; }
+.verde { background: #e1f5ee; color: #1e9e77; }
+.lila { background: #ece8fc; color: #654ce6; }
+.rojo { background: #fdebe8; color: #c94a38; }
+
+.flecha {
+  color: #654ce6;
+  font-size: 18px;
+}
+
+.pildora-verde {
+  background: #e1f5ee;
+  color: #1e9e77;
+  padding: 5px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.salir {
+  border-color: #f3c6c0;
+  margin-top: 6px;
+}
+
+.menu {
+  --background: #ffffff;
+  border-top: 1px solid #eeeeee;
+}
+
+ion-tab-button {
+  --color: #666666;
+}
+
+.activa {
+  --color: #654ce6;
+}

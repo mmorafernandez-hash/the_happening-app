@@ -1,0 +1,166 @@
+.fondo {
+  --background: #ffffff;
+  --padding-start: 20px;
+  --padding-end: 20px;
+  --padding-top: 24px;
+  --padding-bottom: 24px;
+}
+
+.cabecera, .info-izq, .caja-buscador, .btn-qr {
+  display: flex;
+  align-items: center;
+}
+
+.cabecera {
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.boton-volver {
+  --background: #ece8fc;
+  --color: #654ce6;
+  --border-radius: 12px;
+  width: 40px;
+  height: 40px;
+  margin: 0;
+  font-size: 20px;
+}
+
+.titulo {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #222222;
+}
+
+.subtitulo, .curso {
+  display: block;
+  font-size: 12px;
+  color: #777777;
+  margin-top: 2px;
+}
+
+/* Barra de progreso */
+.caja-progreso, .caja-buscador {
+  background: #f2effc;
+  border-radius: 16px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.textos-progreso, .fila-alumno {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.textos-progreso {
+  margin-bottom: 10px;
+}
+
+.etiqueta-morada {
+  color: #654ce6;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.contador {
+  color: #222222;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.barra-fondo {
+  width: 100%;
+  height: 9px;
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.barra-verde {
+  height: 100%;
+  background: #19c39c;
+  border-radius: 10px;
+}
+
+/* Botón QR y buscador */
+.btn-qr {
+  width: 100%;
+  justify-content: center;
+  gap: 10px;
+  background: #654ce6;
+  color: #ffffff;
+  border: none;
+  border-radius: 14px;
+  padding: 14px;
+  font-size: 15px;
+  margin-bottom: 14px;
+}
+
+.btn-qr ion-icon, .icono-lupa {
+  font-size: 20px;
+}
+
+.caja-buscador {
+  gap: 10px;
+  padding: 12px 14px;
+}
+
+.icono-lupa {
+  color: #654ce6;
+}
+
+.caja-buscador input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: #222222;
+}
+
+/* Lista de alumnos */
+.fila-alumno {
+  padding: 12px 2px;
+  border-bottom: 1px solid #f0eef7;
+}
+
+.info-izq {
+  gap: 14px;
+}
+
+.avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #e5dffa;
+  color: #654ce6;
+  font-size: 13px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nombre {
+  font-size: 14px;
+  font-weight: 600;
+  color: #222222;
+}
+
+.check-circulo {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 1.5px solid #c5c0d8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.marcado {
+  border-color: #19c39c;
+  color: #19c39c;
+  font-size: 17px;
+}

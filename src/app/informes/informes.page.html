@@ -1,0 +1,84 @@
+<ion-content class="fondo">
+  <div class="pantalla-fija">
+
+
+    <div class="cabecera">
+      <button class="btn-volver" routerLink="/perfil">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </button>
+      <h1 class="titulo">INFORMES</h1>
+    </div>
+
+
+    <div class="filtros">
+      <button
+        class="pildora"
+        [class.activa]="periodoActivo === 'mes'"
+        (click)="cambiarPeriodo('mes')">
+        Este mes
+      </button>
+      <button
+        class="pildora"
+        [class.activa]="periodoActivo === 'trimestre'"
+        (click)="cambiarPeriodo('trimestre')">
+        Trimestre
+      </button>
+      <button
+        class="pildora"
+        [class.activa]="periodoActivo === 'curso'"
+        (click)="cambiarPeriodo('curso')">
+        Curso
+      </button>
+    </div>
+
+
+    <div class="resumen">
+      <div class="tarjeta-dato">
+        <span class="etiqueta">Participación</span>
+        <strong class="valor">{{ datosActuales.participacion }}%</strong>
+      </div>
+      <div class="tarjeta-dato">
+        <span class="etiqueta">Eventos</span>
+        <strong class="valor">{{ datosActuales.eventos }}</strong>
+      </div>
+    </div>
+
+
+    <h3 class="seccion">POR CATEGORÍA</h3>
+    <div class="lista-barras">
+      <div class="fila-barra" *ngFor="let cat of datosActuales.categorias">
+        <span class="nombre">{{ cat.nombre }}</span>
+        <div class="barra-fondo">
+          <div
+            class="barra-relleno"
+            [style.width.%]="cat.porcentaje"
+            [style.background]="cat.color">
+          </div>
+        </div>
+        <span class="porcentaje">{{ cat.porcentaje }}%</span>
+      </div>
+    </div>
+
+
+    <h3 class="seccion">POR CURSO</h3>
+    <div class="scroll-cursos">
+      <div class="fila-barra" *ngFor="let curso of datosActuales.cursos">
+        <span class="nombre">{{ curso.nombre }}</span>
+        <div class="barra-fondo">
+          <div
+            class="barra-relleno morado"
+            [style.width.%]="curso.porcentaje">
+          </div>
+        </div>
+        <span class="porcentaje">{{ curso.porcentaje }}%</span>
+      </div>
+    </div>
+
+
+    <button class="btn-exportar" (click)="exportarInforme()">
+      <ion-icon name="download-outline"></ion-icon>
+      <span>Exportar informe</span>
+    </button>
+
+  </div>
+</ion-content>

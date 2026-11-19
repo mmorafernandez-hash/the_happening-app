@@ -1,0 +1,163 @@
+.fondo {
+  --background: #ffffff;
+  --padding-start: 16px;
+  --padding-end: 16px;
+  --padding-top: 24px;
+}
+
+.cabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+
+  .titulo-principal {
+    color: #654ce6;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  .campana {
+    --color: #654ce6;
+    font-size: 24px;
+    margin: 0;
+  }
+}
+
+.seccion {
+  color: #222222;
+  font-size: 14px;
+  font-weight: 700;
+  margin: 8px 0 12px;
+}
+
+.tarjeta {
+  margin: 0 0 16px;
+  border-radius: 16px;
+  background: #f5f4f9;
+  box-shadow: none;
+  overflow: hidden;
+
+  .portada {
+    position: relative;
+    height: 150px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .etiqueta {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      color: #ffffff;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 12px;
+
+      &.verde {
+        background: #2bb69b;
+      }
+
+      &.oscura {
+        background: rgba(30, 30, 30, 0.78);
+      }
+    }
+
+    .sombra {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      padding: 20px 12px 8px;
+      background: linear-gradient(transparent, rgba(0, 0, 0, 0.75));
+
+      h4 {
+        margin: 0;
+        color: #ffffff;
+        font-size: 16px;
+        font-weight: 700;
+      }
+    }
+  }
+
+  .detalles {
+    padding: 10px 14px;
+
+    .fecha {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: #444444;
+      font-size: 12px;
+      margin-bottom: 8px;
+    }
+
+    .pie {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .avatares {
+        display: flex;
+        align-items: center;
+
+        .circulo {
+          width: 18px;
+          height: 18px;
+          border-radius: 50%;
+          border: 2px solid #ffffff;
+          margin-right: -6px;
+
+          &.amarillo { background: #ffca28; }
+          &.azul { background: #42a5f5; }
+          &.morado { background: #654ce6; margin-right: 8px; }
+        }
+
+        .inscritos {
+          font-size: 11px;
+          color: #666666;
+        }
+      }
+
+         .ganador {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 12px;
+        font-weight: 600;
+        color: #8c7a3e;
+
+        .trofeo {
+          font-size: 18px;
+          color: #b59b4c;
+        }
+      }
+
+      .enlace {
+        color: #654ce6;
+        font-size: 12px;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.menu {
+  --background: #ffffff;
+  border-top: 1px solid #eeeeee;
+
+  ion-tab-button {
+    --color: #666666;
+
+    &.activa {
+      --color: #654ce6;
+    }
+  }
+}

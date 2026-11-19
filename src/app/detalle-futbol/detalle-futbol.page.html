@@ -1,0 +1,41 @@
+<ion-content class="fondo">
+
+  <div class="cabecera-amarilla">
+    <button class="btn-volver" (click)="volver()">
+      <ion-icon name="arrow-back-outline"></ion-icon>
+    </button>
+    <h1 class="titulo-evento">TORNEO DE FÚTBOL</h1>
+  </div>
+
+  <div class="cuerpo">
+
+    <div class="info-fila">
+      <ion-icon name="time-outline"></ion-icon>
+      <span>16 oct, 12:00-14:30</span>
+    </div>
+
+    <div class="info-fila">
+      <ion-icon name="location-outline"></ion-icon>
+      <span>Campo Fútbol Sala</span>
+    </div>
+
+    <h3 class="seccion">DESCRIPCIÓN</h3>
+    <p class="texto">
+      Torneo eliminatorio entre cursos. Trofeo y desayuno para el equipo ganador.
+    </p>
+
+    <h3 class="seccion">REQUISITOS</h3>
+    <p class="texto">
+      Equipos de 5 jugadores. Inscripción del equipo antes del 5 nov.
+    </p>
+
+    <button
+      class="btn-asistire"
+      [class.confirmado]="asistire"
+      (click)="confirmarAsistencia()">
+      {{ asistire ? '¡Asistencia confirmada!' : 'Asistiré' }}
+    </button>
+
+  </div>
+
+</ion-content>

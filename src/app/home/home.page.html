@@ -1,4 +1,3 @@
-<!-- Encabezado superior de la app (se oculta si no lo necesitas, pero lo mantenemos limpio) -->
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>THE HAPPENING</ion-title>
@@ -6,7 +5,7 @@
 </ion-header>
 <ion-content [fullscreen]="true">
 
-  <!--fondo de imagenes-->
+
   <div class="mosaico">
     <div class="fondo1"><img src="assets/icon/teatro.jpg" alt="Teatro"></div>
     <div class="fondo2"><img src="assets/icon/musica.jpg" alt="Música"></div>
@@ -15,17 +14,16 @@
     <div class="fondo5"><img src="assets/icon/baloncesto.jpg" alt="Baloncesto"></div>
   </div>
 
-  <!-- Capa oscura semitransparente sobre el collage para que las fotos no deslumbren -->
   <div class="capa"></div>
 
-  <!-- 2. TARJETA FLOTANTE DE LOGIN (La caja inferior translúcida) -->
+
   <div class="tarjeta">
 
-    <!-- contenedor de mi logo de la aplicacion  -->
+
     <div class="logo">
       <img src="assets/icon/pasa_logo.png" alt="Logo" class="icono">
     </div>
-    <!-- Título principal de la aplicación -->
+
     <h1 class="titulo">THE HAPPENING</h1>
     <p class="subtitulo">Todos los eventos de tu instituto, en un solo sitio. Ciencia, deporte, cultura y más.</p>
 
@@ -42,7 +40,7 @@
         </ion-input>
       </ion-item>
 
-      <!-- campo contraseña que le hemos metido que cuando la escribas ponga puntitos estando ocultos -->
+
       <ion-item class="estiloemail">
         <ion-input
           label="CONTRASEÑA"
@@ -52,7 +50,7 @@
         </ion-input>
       </ion-item>
 
-      <!-- Botón de entrada redondeado (estilo shape="round" de la imagen) -->
+
       <ion-button expand="block" shape="round" class="empezar" routerLink="/eventos">
         Empezar
       </ion-button>

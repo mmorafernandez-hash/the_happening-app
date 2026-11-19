@@ -1,0 +1,81 @@
+<ion-content class="fondo">
+
+
+  <div class="cabecera-azul">
+    <button class="btn-volver" (click)="volver()">
+      <ion-icon name="arrow-back-outline"></ion-icon>
+    </button>
+    <h1 class="titulo-evento">FESTIVAL CULTURAL</h1>
+  </div>
+
+
+  <div class="cuerpo">
+
+    <div class="info-fila">
+      <ion-icon name="time-outline"></ion-icon>
+      <span>2 oct, 12:00-15:00</span>
+    </div>
+
+    <div class="info-fila">
+      <ion-icon name="location-outline"></ion-icon>
+      <span>Salón de Actos</span>
+    </div>
+
+    <h3 class="seccion">DESCRIPCIÓN</h3>
+    <p class="texto">
+      Actuaciones de música, baile y teatro preparadas por los distintos cursos del instituto.
+    </p>
+
+
+    <div class="selector-estado">
+      <button
+        class="opcion"
+        [class.activa]="estado === 'asistire'"
+        (click)="cambiarEstado('asistire')">
+        <ion-icon *ngIf="estado === 'asistire'" name="checkmark-outline"></ion-icon>
+        <span>ASISTIRE</span>
+      </button>
+
+      <button
+        class="opcion"
+        [class.activa]="estado === 'interesa'"
+        (click)="cambiarEstado('interesa')">
+        <span>ME INTERESA</span>
+      </button>
+    </div>
+
+
+    <button class="btn-entrada" (click)="abrirEntrada(true)">
+      <ion-icon name="qr-code-outline"></ion-icon>
+      <span>Ver entrada</span>
+    </button>
+
+
+    <ion-modal
+      [isOpen]="mostrarEntrada"
+      (didDismiss)="abrirEntrada(false)"
+      [initialBreakpoint]="0.6"
+      [breakpoints]="[0, 0.6, 0.85]">
+      <ng-template>
+        <div class="contenedor-qr">
+          <div class="barra-superior"></div>
+          <h2 class="titulo-qr">FESTIVAL CULTURAL</h2>
+          <p class="subtitulo-qr">2 oct · 12:00 - 15:00 · Salón de Actos</p>
+
+          <div class="caja-qr">
+            <ion-icon name="qr-code-outline" class="icono-qr"></ion-icon>
+            <span class="codigo-texto">ENT-2026-FC89</span>
+          </div>
+
+          <p class="asistente-qr">Asistente: <strong>Mario Mora</strong></p>
+
+          <button class="btn-cerrar-qr" (click)="abrirEntrada(false)">
+            Cerrar
+          </button>
+        </div>
+      </ng-template>
+    </ion-modal>
+
+  </div>
+
+</ion-content>
