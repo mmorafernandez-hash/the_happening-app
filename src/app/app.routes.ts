@@ -1,12 +1,6 @@
 import { Routes } from '@angular/router';
 
 export const routes: Routes = [
-  // Si entras en la raíz (localhost:8100), te lleva directo a 'eventos'
-  {
-    path: '',
-    redirectTo: 'eventos',
-    pathMatch: 'full',
-  },
   {
     path: 'home',
     loadComponent: () => import('./home/home.page').then((m) => m.HomePage),
@@ -78,5 +72,9 @@ export const routes: Routes = [
     path: 'pasar-lista',
     loadComponent: () => import('./pasar-lista/pasar-lista.page').then(m => m.PasarListaPage)
   },
-
+  {
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'full',
+  },
 ];
